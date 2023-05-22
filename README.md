@@ -1,5 +1,5 @@
 # MMSfx
-A graphics based system for managing supermaket memberships built with JavaFX
+A graphics based system for managing supermaket memberships, built with JavaFX
 
 ## About the Program
 This was an assignment I submitted for 48024 Applications Programming at UTS. The assignment explored object-oriented design principles, graphical user interfaces, and the model-view-controller architecture. Producing the program involved writing in Java, FXML, and CSS.
