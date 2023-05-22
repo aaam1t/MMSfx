@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="controller.MembershipController" styleClass="background" prefHeight="400.0" prefWidth="900.0" spacing="20" alignment="CENTER_LEFT" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="10" bottom="20" left="5" right="5" />
+    </padding>
+    <GridPane alignment="CENTER">
+        <Label text="Personal Details" styleClass="label-h2" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+        <Label text="Name:" prefWidth="200" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="nameTf" prefWidth="400" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="emailTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="phoneTf" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="addressTf" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </GridPane>
+    <Separator/>
+    <GridPane alignment="CENTER">
+        <padding>
+            <Insets left="150" right="150" bottom="10" />
+        </padding>
+        <Label text="Membership Details" styleClass="label-h2" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+        <Label text="ID:" prefWidth="200" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="idTf" prefWidth="400" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Expense:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="expenseTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Text fx:id="typeTxt" styleClass="Text-type" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="addBtn" text="Add" onAction="#handleAdd"/>
+        <Button fx:id="updateBtn" text="Update" onAction="#handleUpdate"/>
+        <Button fx:id="closeBtn" text="Close" onAction="#handleClose"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+</VBox>

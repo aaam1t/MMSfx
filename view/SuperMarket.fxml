@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="controller.SuperMarketController" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="10" styleClass="background" prefHeight="500.0" prefWidth="700.0">
+    <HBox alignment="CENTER_LEFT">
+        <Label text="Filters" styleClass="label-h2"/>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Name:"/>
+        <TextField fx:id="nameTf" promptText="Filter by name"/>
+        <Label text="Email:"/>
+        <TextField fx:id="emailTf" promptText="Filter by email"/>
+    </HBox>
+    <Separator/>
+    <TableView fx:id="membershipsTv" items="${controller.supermarket.memberships}">
+        <placeholder>
+            <Label text="Memberships list is not loaded"/>
+        </placeholder>
+        <columns>
+            <TableColumn text="Name"><cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory></TableColumn>
+            <TableColumn text="Email"><cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory></TableColumn>
+            <TableColumn text="Phone"><cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory></TableColumn>
+        </columns>
+    </TableView>
+    <Separator/>
+    <HBox spacing="10" alignment="CENTER">
+        <padding><Insets bottom="10"/></padding>
+        <Button fx:id="addBtn" text="Add" onAction="#handleAdd"/>
+        <Button fx:id="deleteBtn" text="Delete" onAction="#handleDelete"/>
+        <Button fx:id="selectBtn" text="Select" onAction="#handleSelect"/>
+        <Button fx:id="slipBtn" text="SLIP" onAction="#handleSlip"/>
+        <Button fx:id="reportBtn" text="Report" onAction="#handleReport"/>
+        <Button fx:id="closeBtn" text="Close" onAction="#handleClose"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+</VBox>

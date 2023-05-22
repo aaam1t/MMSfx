@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:controller="controller.MMSlipController" prefHeight="338.0" prefWidth="550.0" styleClass="background" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="10" bottom="10" left="10" right="10"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0"/>
+    </columnConstraints>
+    <Label text="Membership Slip:" styleClass="label-h2" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="4"/>
+    <Text text="Total Credits:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Text text="Total Expense:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Text text="Gasdeduction Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Text text="Pay Per Credit:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <Text text="Dollar Available:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Text text="Deduction Rate:" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <Label fx:id="creditLbl" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label fx:id="expenseLbl" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label fx:id="gasLbl" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label fx:id="payLbl" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    <Label fx:id="dollarLbl" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <Label fx:id="deductionLbl" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    <Region prefHeight="60" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="4"/>
+    <Button fx:id="closeBtn" text="Close" onAction="#handleClose" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="4" GridPane.halignment="CENTER"/>
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+</GridPane>
